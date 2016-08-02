@@ -10,9 +10,21 @@
   <body>
 
     <responsive-child>
-      <%= t.include("./assets/real_networks.svg") %>
+      <div class="outer">
+        <div class="title">Apples don't fall far from the tree</div>
+        <div class="chatter">In the past xx years, fourteen former RealNetworks employees have gone on to found their own tech companies.</div>
+        <div class="key"><div class="swatch" style="background: #C7BBDC"></div> <div class="label">Person</div></div>
+        <div class="key"><div class="swatch" style="background: #a8c7bc"></div> <div class="label">Company</div></div>
+
+        <div class="graphic"><%= t.include("./assets/real_networks.svg") %></div>
+        <div class="source">Source: tktk</div>
+        <div class="credit">AUDREY CARLSEN / THE SEATTLE TIMES</div>
+      </div>
     </responsive-child>
 
+    <script>
+    var titleData = <%= JSON.stringify(json.RealNetworks_Nodes) %>;
+    </script>
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>

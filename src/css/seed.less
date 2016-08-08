@@ -1,10 +1,10 @@
 @import "seattletimes";
 
 .outer {
-  max-width: 630px;
+  max-width: 960px;
   font-family: @df-sans;
-  border-top: 1px solid @df-border-gray;
-  border-bottom: 1px solid @df-border-gray;
+  // border-top: 1px solid @df-border-gray;
+  // border-bottom: 1px solid @df-border-gray;
   padding: 20px 0;
   margin: 20px auto;
 }
@@ -12,13 +12,67 @@
 .title {
   font-weight: bold;
   font-size: 28px;
-  margin-bottom: 5px;
-  // text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 .chatter {
-  font-size: 16px;
+  margin-top: 20px;
+  font-size: 18px;
   margin-bottom: 15px;
   font-family: @df-serif;
+  background: @df-off-white;
+  border-radius: 4px;
+  padding: 20px 30px;
+
+  @media @tablet {
+    font-size: 16px;
+  }
+  @media @break {
+    font-size: 14px;
+    padding: 15px 25px;
+  }
+
+  .company {
+    font-family: @df-sans;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .info-text {
+    font-size: 14px;
+
+    &.small {
+      font-family: @df-sans;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    &.large {
+      padding-bottom: 15px;
+    }
+  }
+  .label {
+    margin-right: 3px;
+    margin-bottom: 5px;
+    letter-spacing: 0.08em;
+    background: @df-light-gray;
+    // color: white;
+    font-weight: bold;
+    padding: 3px 6px 2px 6px;
+    text-transform: uppercase;
+    font-family: @df-sans;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+  .text {
+    display: inline-block;
+  }
+  .info {
+    padding-top: 3px;
+  }
+}
+
+.key-box {
+  padding-top: 10px;
 }
 
 .key {
@@ -27,6 +81,7 @@
   
   .swatch, .label {
     display: inline-block;
+    vertical-align: top;
   }
   .label {
     padding-right: 10px;
@@ -34,8 +89,30 @@
   .swatch {
     border-radius: 50%;
     background: black;
-    height: 12px;
-    width: 12px;
+    height: 15px;
+    width: 15px;
+    margin-right: 2px;
+  }
+}
+
+.flex-container {
+  // .align-items(center);
+  .display-flex();
+
+  @media @mobile {
+    display: block;
+  }
+
+  .flex-left {
+    .flex(3);
+  }
+  .flex-right {
+    .flex(2);
+    padding-left: 40px;
+
+    @media @mobile {
+      padding-left: 0;
+    }
   }
 }
 
@@ -47,10 +124,16 @@
   }
 }
 
-circle:hover {
+circle.visible {
   stroke-width: 2px;
   stroke-opacity: 1.0;
   stroke: @df-middle-gray;
+}
+path.visible {
+  stroke-width: 2px;
+}
+.selected circle {
+  fill: red;
 }
 
 g {
@@ -58,14 +141,10 @@ g {
 }
 
 text.name {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
 }
-text.title {
-  font-size: 14px;
-  font-weight: 400;
-  font-style: italic;
-}
+
 .background-label {
   display: none;
   fill: @df-off-white;
@@ -73,11 +152,11 @@ text.title {
   z-index: 9999;
 }
 
-.visible {
-  .label, .background-label {
-    display: block;
-  }
-}
+// .visible {
+//   .label, .background-label {
+//     display: block;
+//   }
+// }
 
 .source {
   padding-top: 20px;
@@ -85,6 +164,7 @@ text.title {
 }
 .source, .credit {
   // text-align: right;
+  padding-top: 20px;
   font-size: 11px;
   color: rgba(0,0,0,.4);
 }

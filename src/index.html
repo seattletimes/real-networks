@@ -11,19 +11,31 @@
 
     <responsive-child>
       <div class="outer">
-        <div class="title">Apples don't fall far from the tree</div>
-        <div class="chatter">In the past xx years, fourteen former RealNetworks employees have gone on to found their own tech companies.</div>
-        <div class="key"><div class="swatch" style="background: #C7BBDC"></div> <div class="label">Person</div></div>
-        <div class="key"><div class="swatch" style="background: #a8c7bc"></div> <div class="label">Company</div></div>
 
-        <div class="graphic"><%= t.include("./assets/real_networks.svg") %></div>
-        <div class="source">Source: tktk</div>
+        <div class="flex-container">
+        
+          <div class="flex-left">
+            <div class="graphic"><%= t.include("./assets/real_networks.svg") %></div>
+          </div>
+
+          <div class="flex-right">
+
+            <div class="key-box">
+              <div class="key"><div class="swatch" style="background: #C7BBDC"></div> <div class="label">Person</div></div>
+              <div class="key"><div class="swatch" style="background: #a8c7bc"></div> <div class="label">Company</div></div>
+            </div>
+
+            <div class="chatter">In the past xx years, fourteen former RealNetworks employees have gone on to found their own tech companies. Click on a circle to learn more.</div>
+          </div>
+        </div>
+
         <div class="credit">AUDREY CARLSEN / THE SEATTLE TIMES</div>
       </div>
     </responsive-child>
 
     <script>
-    var titleData = <%= JSON.stringify(json.RealNetworks_Nodes) %>;
+      var companyData = <%= JSON.stringify(json.RealNetworks_Companies) %>;
+      var personData = <%= JSON.stringify(json.RealNetworks_Nodes) %>;
     </script>
     <script src="app.js" async></script>
     <% if (json.project.production) { %>

@@ -3,15 +3,18 @@
 // var track = require("./lib/tracking");
 
 require("component-responsive-frame/child");
-console.log(titleData)
+var qsa = require("./lib/qsa.js");
+
 var qsa = require("./lib/qsa");
 var svg = document.querySelector("svg");
 var namespace = svg.getAttribute("xmlns");
+var paths = document.querySelectorAll("path");
+var circles = document.querySelectorAll("circle");
 
 qsa("circle").forEach(function(c) {
   var group = document.createElementNS(namespace, "g");
   var nameLabel = document.createElementNS(namespace, "text");
-  var name = c.getAttribute("class");
+  var name = c.getAttribute("id");
 
   c.parentElement.replaceChild(group, c);
   group.appendChild(c);
@@ -19,25 +22,58 @@ qsa("circle").forEach(function(c) {
   nameLabel.innerHTML = name;
   nameLabel.classList.add("name");
   var nameDimensions = nameLabel.getBBox();
-  nameLabel.setAttribute("x", c.getAttribute("cx") - nameDimensions.width / 2 );
+  nameLabel.setAttribute("x", c.getAttribute("cx") - nameDimensions.width / 2 + 2);
   nameLabel.setAttribute("y", c.getAttribute("cy"));
-  
-  if (titleData[name]) {
-    var title = titleData[name].title;
-    var titleLabel = document.createElementNS(namespace, "text");
-    group.appendChild(titleLabel);
-    titleLabel.innerHTML = title;
-    titleLabel.classList.add("title");
-    var titleDimensions = titleLabel.getBBox();
-    titleLabel.setAttribute("x", c.getAttribute("cx") - titleDimensions.width / 2 );
-    titleLabel.setAttribute("y", c.getAttribute("cy") * 1 + nameDimensions.height );
-  }
 
   group.addEventListener("mouseover", function() {
-    group.classList.add("visible");
+    group.classList.add("selected");
+    var id = group.childNodes[0].id;
+    var connections = [];
+    paths.forEach(function(p) {
+      if (p.id.indexOf(id) > -1) {
+        connections.push(id);
+        p.id.split(id).forEach(function(i) {
+          if (i !== "") {
+            connections.push(i.trim());
+          }
+        })
+        p.classList.add("visible");
+      }
+    });
+    circles.forEach(function(c) {
+      if (connections.indexOf(c.id) > -1) {
+        c.classList.add("visible");
+      }
+    });
   })
   group.addEventListener("mouseout", function() {
-    group.classList.remove("visible");
+    qsa(".visible").forEach(function(i){
+      i.classList.remove("visible");
+    });
+    qsa(".selected").forEach(function(i){
+      i.classList.remove("selected");
+    });
+  })
+  group.addEventListener("click", function() {
+    var name = group.getElementsByTagName("circle")[0].id;
+    if (companyData[name]) {
+      var data = companyData[name];
+      document.querySelector(".chatter").innerHTML = `
+        <div class="company">${data.company}</div>
+        <div class="large info-text"><div class="info">${data.info}</div></div>
+        <div class="small info-text"><div class="label">Industry</div> <div class="text">${data.industry}</div></div>
+        <div class="small info-text"><div class="label">CEO</div> <div class="text">${data.ceo}</div></div>
+        <div class="small info-text"><div class="label">Founded</div> <div class="text">${data.founded}</div></div>
+      `;
+    } else if (personData[name]) {
+      var data = personData[name];
+      document.querySelector(".chatter").innerHTML = `
+        <div class="company">${data.name}</div>
+        <div class="large info-text"><div class="info">${data.title}</div></div>
+        <div class="small info-text"><div class="label">Then</div> <div class="text">${data.realnetworks}</div></div>
+        <div class="small info-text"><div class="label">Now</div> <div class="text">${data.now}</div></div>
+      `;
+    }
   })
 });
 

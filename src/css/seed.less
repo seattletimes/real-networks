@@ -124,16 +124,26 @@
   }
 }
 
-circle.visible {
+circle.hovered, circle.clicked {
   stroke-width: 2px;
   stroke-opacity: 1.0;
-  stroke: @df-middle-gray;
+  stroke: @df-dark-gray;
 }
-path.visible {
+path.hovered, path.clicked {
   stroke-width: 2px;
+  stroke: @df-dark-gray;
 }
-.selected circle {
-  fill: red;
+.hovered circle, .clicked circle {
+  &.st1 {
+    fill: darken(#C7BBDC, 5%);
+  }
+  &.st2 {
+    fill: darken(#A8C7BC, 5%);
+  }
+}
+
+.hovered text.name, .clicked text.name {
+  fill: black;
 }
 
 g {
@@ -143,6 +153,7 @@ g {
 text.name {
   font-size: 12px;
   font-weight: bold;
+  fill: @df-dark-gray;
 }
 
 .background-label {
@@ -151,12 +162,6 @@ text.name {
   border-radius: 10px;
   z-index: 9999;
 }
-
-// .visible {
-//   .label, .background-label {
-//     display: block;
-//   }
-// }
 
 .source {
   padding-top: 20px;

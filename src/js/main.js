@@ -11,6 +11,29 @@ var namespace = svg.getAttribute("xmlns");
 var paths = document.querySelectorAll("path");
 var circles = document.querySelectorAll("circle");
 
+var showNetwork = function(group, state) {
+  console.log(state)
+  group.classList.add(state);
+  var id = group.childNodes[0].id;
+  var connections = [];
+  paths.forEach(function(p) {
+    if (p.id.indexOf(id) > -1) {
+      connections.push(id);
+      p.id.split(id).forEach(function(i) {
+        if (i !== "") {
+          connections.push(i.trim());
+        }
+      })
+      p.classList.add(state);
+    }
+  });
+  circles.forEach(function(c) {
+    if (connections.indexOf(c.id) > -1) {
+      c.classList.add(state);
+    }
+  });
+}
+
 qsa("circle").forEach(function(c) {
   var group = document.createElementNS(namespace, "g");
   var nameLabel = document.createElementNS(namespace, "text");
@@ -26,35 +49,18 @@ qsa("circle").forEach(function(c) {
   nameLabel.setAttribute("y", c.getAttribute("cy"));
 
   group.addEventListener("mouseover", function() {
-    group.classList.add("selected");
-    var id = group.childNodes[0].id;
-    var connections = [];
-    paths.forEach(function(p) {
-      if (p.id.indexOf(id) > -1) {
-        connections.push(id);
-        p.id.split(id).forEach(function(i) {
-          if (i !== "") {
-            connections.push(i.trim());
-          }
-        })
-        p.classList.add("visible");
-      }
-    });
-    circles.forEach(function(c) {
-      if (connections.indexOf(c.id) > -1) {
-        c.classList.add("visible");
-      }
-    });
+    showNetwork(group, "hovered");
   })
   group.addEventListener("mouseout", function() {
-    qsa(".visible").forEach(function(i){
-      i.classList.remove("visible");
-    });
-    qsa(".selected").forEach(function(i){
-      i.classList.remove("selected");
+    qsa(".hovered").forEach(function(i){
+      i.classList.remove("hovered");
     });
   })
   group.addEventListener("click", function() {
+    qsa(".clicked").forEach(function(i){
+      i.classList.remove("clicked");
+    });
+    showNetwork(group, "clicked");
     var name = group.getElementsByTagName("circle")[0].id;
     if (companyData[name]) {
       var data = companyData[name];

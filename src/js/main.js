@@ -74,6 +74,7 @@ qsa("circle").forEach(function(c) {
     } else if (personData[name]) {
       var data = personData[name];
       document.querySelector(".chatter").innerHTML = `
+        <img class="mugshot" src="./assets/${data.image}.jpg">
         <div class="company">${data.name}</div>
         <div class="large info-text"><div class="info">${data.title}</div></div>
         <div class="small info-text"><div class="label">Then</div> <div class="text">${data.realnetworks}</div></div>

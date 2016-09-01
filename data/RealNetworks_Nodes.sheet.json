@@ -1,44 +1,98 @@
 {
   "Paul Thelen": {
-    "title": "Founder and CEO, Big Fish Games"
+    "name": "Paul Thelen",
+    "title": "Founder and CEO, Big Fish Games",
+    "realnetworks": "Director of consumer marketing from 1996 to 2002 ",
+    "now": "Founder and CEO of Big Fish Games",
+    "image": "thelen"
   },
   "Sujal Patel": {
-    "title": "Strategic director, Madrona Venture Group"
+    "name": "Sujal Patel",
+    "title": "Strategic director, Madrona Venture Group",
+    "realnetworks": "Various engineering roles between 1996 to 2000",
+    "now": "Founded Isilon Systems and served as CEO for 10 years. Now an advisor at Madrona Venture Group and considering another potential venture.",
+    "image": "patel"
   },
   "Peter Godman": {
-    "title": "Founder and CEO, Qumulo"
+    "name": "Peter Godman",
+    "title": "Founder and CEO, Qumulo",
+    "realnetworks": "Technical lead between 1998 and 2001",
+    "now": "Worked at Isilon for nearly six years. Went on to start Corensic before founding growing storage startup Qumulo., where he serves as CEO",
+    "image": "godman"
   },
   "Dave Cotter": {
-    "title": "CEO, ReplyYes"
+    "name": "Dave Cotter",
+    "title": "CEO, ReplyYes and SquareHub",
+    "realnetworks": "Product and program manager from 1997 to 2002",
+    "now": "Worked at Amazon and Zulily, now serves as CEO of ReplyYes and SquareHub",
+    "image": "cotter"
   },
   "Josh Hug": {
-    "title": "Co-founder, Chief Product Officer at Remitly"
+    "name": "Josh Hug",
+    "title": "Co-founder, Chief Product Officer at Remitly",
+    "realnetworks": "Engineer, technical lead, development manager and other roles between 1999 and 2006",
+    "now": "Chief Product Officer at Remitly, a startup making a mobile app to send money internationally"
   },
   "Andrew Wright": {
-    "title": "Executive chairman, Ripl"
+    "name": "Andrew Wright",
+    "title": "Executive chairman, Ripl",
+    "realnetworks": "Vice president of RealArcade between 1999 and 2004",
+    "now": "Founded Smilebox and now serves as executive chairman of Ripl Inc and managing director of Wright Ventures, an investment fund",
+    "image": "wright"
   },
   "Jai Jaisimha": {
-    "title": "CEO, Appnique"
+    "name": "Jai Jaisimha",
+    "title": "CEO, Appnique",
+    "realnetworks": "Senior director from 1997 to 2002",
+    "now": "Stints at Microsoft, Medio, AOL and now founder and CEO of Appnique",
+    "image": "jaisimha"
   },
   "Bill Hankes": {
-    "title": "CEO, Sqoop"
+    "name": "Bill Hankes",
+    "title": "CEO, Sqoop",
+    "realnetworks": "Vice president of corporate communications from 2006 to 2010",
+    "now": "Founder and CEO of Sqoop",
+    "image": "hankes"
   },
   "Derrick Morton": {
-    "title": "CEO, FlowPlay"
+    "name": "Derrick Morton",
+    "title": "CEO, FlowPlay",
+    "realnetworks": "General manager of mobile games between 2004 and 2006",
+    "now": "CEO of FlowPlay since 2006",
+    "image": "morton"
   },
   "Halley Bock": {
-    "title": "Founder, Halley Bock LLC"
+    "name": "Halley Bock",
+    "title": "Founder, Halley Bock LLC",
+    "realnetworks": "1997 to 2001. Managing producer & director of the Media Lab",
+    "now": "Working at her own business with companies who want to grow and improve communication",
+    "image": "bock"
   },
   "Joleen Winther Hughes": {
-    "title": "Founder, Hughes Media Law Group"
+    "name": "Joleen Winther Hughes",
+    "title": "Founder, Hughes Media Law Group",
+    "realnetworks": "1997 to 2004. Senior counsel",
+    "now": "Founder and principal at Hughes Media Law Group and adjunct professor at University of Washington. Former owner of Celtic Swell Irish Pub & Restaurant",
+    "image": "winther_hughes"
   },
   "Gary Greenbaum": {
-    "title": "Co-founder and CEO, Syntonic Wireless"
+    "name": "Gary Greenbaum",
+    "title": "Co-founder and CEO, Syntonic Wireless",
+    "realnetworks": "1995 to 2002. Senior director",
+    "now": "Worked at Microsoft for seven years, now is co-founder and CEO of Syntonic",
+    "image": "greenbaum"
   },
   "Colleen Moffitt": {
-    "title": "Partner, Communique PR"
+    "name": "Colleen Moffitt",
+    "title": "Partner, Communique PR",
+    "realnetworks": "1997 to 2004. Recruiter and program manager",
+    "now": "Partner at Communique PR",
+    "image": "moffitt"
   },
   "Kevin Beukelman": {
-    "title": "Lead software engineer, Remitly"
+    "name": "Kevin Beukelman",
+    "title": "Lead software engineer, Remitly",
+    "realnetworks": "2005 to 2006. Software development engineer",
+    "now": "Founded Tastemakers, which was acquired by Amazon. Now is lead software engineer of platform engineering at Remitly"
   }
 }

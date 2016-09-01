@@ -1,0 +1,128 @@
+{
+  "Big Fish Games": {
+    "company": "Big Fish Games",
+    "founded": 2002,
+    "ceo": "Paul Thelen",
+    "industry": "Game studio",
+    "info": "A casual gaming company, bought by Churchill Downs in 2014."
+  },
+  "Isilon": {
+    "company": "Isilon",
+    "founded": 2001,
+    "ceo": "N/A",
+    "industry": "Digital storage",
+    "info": "A data storage company, bought by EMC in 2010."
+  },
+  "Qumulo": {
+    "company": "Qumulo",
+    "founded": 2012,
+    "ceo": "Peter Godman",
+    "industry": "Data storage",
+    "info": "A data storage company that has raised about $100 million from investors."
+  },
+  "ReplyYes": {
+    "company": "ReplyYes",
+    "founded": 2015,
+    "ceo": "Dave Cotter",
+    "industry": "E-commerce",
+    "info": "A message-based e-commerce company, selling records and graphic novels."
+  },
+  "Shelfari": {
+    "company": "Shelfari",
+    "founded": 2006,
+    "ceo": "N/A",
+    "industry": "Social media",
+    "info": "A social-networking company that offered way to catalog which books you've read, bought by Amazon in 2008."
+  },
+  "Smilebox": {
+    "company": "Smilebox",
+    "founded": 2005,
+    "ceo": "N/A",
+    "industry": "Photo-sharing",
+    "info": "A digital photo products company, bought by Perion in 2012."
+  },
+  "Appnique": {
+    "company": "Appnique",
+    "founded": 2012,
+    "ceo": "Jai Jaisimha",
+    "industry": "Online marketing",
+    "info": "A company that provides targeted marketing for apps."
+  },
+  "Sqoop": {
+    "company": "Sqoop",
+    "founded": 2013,
+    "ceo": "Bill Hankes",
+    "industry": "News notification",
+    "info": "A company that scrapes lawsuits and public documents on businesses to aid journalists."
+  },
+  "Flowplay": {
+    "company": "Flowplay",
+    "founded": 2006,
+    "ceo": "Derrick Morton",
+    "industry": "Casual gaming",
+    "info": "A casual gaming company that emphasizes the social aspect of online gaming."
+  },
+  "AdXpose": {
+    "company": "AdXpose",
+    "founded": 2005,
+    "ceo": "N/A",
+    "industry": "Advertising analytics",
+    "info": "An advertising analytics company, bought by comScore for $22 million in 2011."
+  },
+  "SquareHub": {
+    "company": "SquareHub",
+    "founded": 2012,
+    "ceo": "Dave Cotter",
+    "industry": "Social networking",
+    "info": "A private social networking company for families."
+  },
+  "Fierce Inc.": {
+    "company": "Fierce Inc.",
+    "founded": 2001,
+    "ceo": "Susan Scott",
+    "industry": "Communication training",
+    "info": "An executive coaching company that helps businesses with effective communication methods."
+  },
+  "LUX Media": {
+    "company": "LUX Media",
+    "founded": 2004,
+    "ceo": "Steve Mack, Principal and Founder",
+    "industry": "Multimedia",
+    "info": "An agency providing all sorts of multimedia services."
+  },
+  "Hughes Media Law Group": {
+    "company": "Hughes Media Law Group",
+    "founded": 2008,
+    "ceo": "Joleen Winther Hughes, Founder and Principal",
+    "industry": "Law",
+    "info": "A company that provides legal services for media and other businesses."
+  },
+  "Syntonic Inc.": {
+    "company": "Syntonic Inc.",
+    "founded": 2012,
+    "ceo": "Gary Greenbaum",
+    "industry": "Digital data services",
+    "info": "A company that provides sponsored data to mobile carriers and other businesses"
+  },
+  "Communique PR": {
+    "company": "Communique PR",
+    "founded": 2004,
+    "ceo": "Colleen Moffitt, Partner",
+    "industry": "Public relations",
+    "info": "A boutique PR firm based in Seattle's Interbay neighborhood."
+  },
+  "Remitly": {
+    "company": "Remitly",
+    "founded": 2011,
+    "ceo": "Matt Oppenheimer",
+    "industry": "Financial tech",
+    "info": "A remittance company that people send money internationally using a mobile phone."
+  },
+  "RealNetworks": {
+    "company": "RealNetworks",
+    "founded": 1995,
+    "ceo": "Rob Glaser",
+    "industry": "Digital media",
+    "info": "A dot-com darling that has since been downsized but persists in the streaming and digital media market."
+  }
+}

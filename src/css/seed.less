@@ -17,28 +17,45 @@
 }
 .chatter {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 17px;
   margin-bottom: 15px;
   font-family: @df-serif;
   background: @df-off-white;
   border-radius: 4px;
-  padding: 20px 30px;
+  padding: 30px 40px;
 
   @media @tablet {
-    font-size: 16px;
-  }
-  @media @break {
     font-size: 14px;
-    padding: 15px 25px;
+    padding: 20px 25px;
   }
 
+  .click {
+    font-size: 15px;
+    padding-top: 15px;
+
+    @media @tablet {
+      font-size: 13px;
+    }
+  }
+
+  .mugshot {
+    // margin: auto;
+    // display: block;
+    max-height: 160px;
+    margin-bottom: 10px;
+  }
   .company {
     font-family: @df-sans;
     font-size: 20px;
     font-weight: bold;
+
+    @media @tablet {
+      font-size: 18px;
+    }
   }
   .info-text {
     font-size: 14px;
+    padding-bottom: 5px;
 
     &.small {
       font-family: @df-sans;
@@ -64,7 +81,7 @@
     font-size: 10px;
   }
   .text {
-    display: inline-block;
+    // display: inline-block;
   }
   .info {
     padding-top: 3px;
@@ -99,7 +116,7 @@
   // .align-items(center);
   .display-flex();
 
-  @media @mobile {
+  @media @break {
     display: block;
   }
 
@@ -109,6 +126,10 @@
   .flex-right {
     .flex(2);
     padding-left: 40px;
+
+    @media @break {
+      padding-left: 0;
+    }
 
     @media @mobile {
       padding-left: 0;
@@ -127,7 +148,7 @@
 circle.hovered, circle.clicked {
   stroke-width: 2px;
   stroke-opacity: 1.0;
-  stroke: @df-dark-gray;
+  stroke: @df-middle-gray;
 }
 path.hovered, path.clicked {
   stroke-width: 2px;
@@ -135,10 +156,10 @@ path.hovered, path.clicked {
 }
 .hovered circle, .clicked circle {
   &.st1 {
-    fill: darken(#C7BBDC, 5%);
+    fill: darken(#C7BBDC, 15%);
   }
   &.st2 {
-    fill: darken(#A8C7BC, 5%);
+    fill: darken(#A8C7BC, 15%);
   }
 }
 
@@ -164,12 +185,13 @@ text.name {
 }
 
 .source {
-  padding-top: 20px;
   font-style: italic;
 }
+.credit {
+  padding-top: 2px;
+}
 .source, .credit {
-  // text-align: right;
-  padding-top: 20px;
+  text-align: right;
   font-size: 11px;
   color: rgba(0,0,0,.4);
 }

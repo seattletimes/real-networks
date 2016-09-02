@@ -3,17 +3,17 @@
 // var track = require("./lib/tracking");
 
 require("component-responsive-frame/child");
+var savage = require("savage-query");
 var qsa = require("./lib/qsa.js");
 
 var qsa = require("./lib/qsa");
 var svg = document.querySelector("svg");
 var namespace = svg.getAttribute("xmlns");
-var paths = document.querySelectorAll("path");
-var circles = document.querySelectorAll("circle");
+var paths = qsa("path");
+var circles = qsa("circle");
 
 var showNetwork = function(group, state) {
-  console.log(state)
-  group.classList.add(state);
+  savage(group).addClass(state);
   var id = group.childNodes[0].id;
   var connections = [];
   paths.forEach(function(p) {
@@ -24,12 +24,12 @@ var showNetwork = function(group, state) {
           connections.push(i.trim());
         }
       })
-      p.classList.add(state);
+      savage(p).addClass(state);
     }
   });
   circles.forEach(function(c) {
     if (connections.indexOf(c.id) > -1) {
-      c.classList.add(state);
+      savage(c).addClass(state);
     }
   });
 }
@@ -39,11 +39,11 @@ qsa("circle").forEach(function(c) {
   var nameLabel = document.createElementNS(namespace, "text");
   var name = c.getAttribute("id");
 
-  c.parentElement.replaceChild(group, c);
+  c.parentNode.replaceChild(group, c);
   group.appendChild(c);
   group.appendChild(nameLabel);
-  nameLabel.innerHTML = name;
-  nameLabel.classList.add("name");
+  nameLabel.textContent = name;
+  savage(nameLabel).addClass("name");
   var nameDimensions = nameLabel.getBBox();
   nameLabel.setAttribute("x", c.getAttribute("cx") - nameDimensions.width / 2 + 2);
   nameLabel.setAttribute("y", c.getAttribute("cy"));
@@ -53,12 +53,12 @@ qsa("circle").forEach(function(c) {
   })
   group.addEventListener("mouseout", function() {
     qsa(".hovered").forEach(function(i){
-      i.classList.remove("hovered");
+      savage(i).removeClass("hovered");
     });
   })
   group.addEventListener("click", function() {
     qsa(".clicked").forEach(function(i){
-      i.classList.remove("clicked");
+      savage(i).removeClass("clicked");
     });
     showNetwork(group, "clicked");
     var name = group.getElementsByTagName("circle")[0].id;

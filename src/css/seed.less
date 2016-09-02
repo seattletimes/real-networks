@@ -16,6 +16,7 @@
   text-align: center;
 }
 .chatter {
+  border: 1px solid @df-light-gray;
   margin-top: 20px;
   font-size: 17px;
   margin-bottom: 15px;
@@ -139,9 +140,20 @@
 
 .graphic {
   text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: percentage(500/554);
+  }
 
   svg {
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
   }
 }
 

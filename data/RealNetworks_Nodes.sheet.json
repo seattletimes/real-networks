@@ -31,7 +31,8 @@
     "name": "Josh Hug",
     "title": "Co-founder, Chief Product Officer at Remitly",
     "realnetworks": "Engineer, technical lead, development manager and other roles between 1999 and 2006",
-    "now": "Chief Product Officer at Remitly, a startup making a mobile app to send money internationally"
+    "now": "Chief Product Officer at Remitly, a startup making a mobile app to send money internationally",
+    "image": "hug"
   },
   "Andrew Wright": {
     "name": "Andrew Wright",
@@ -93,6 +94,7 @@
     "name": "Kevin Beukelman",
     "title": "Lead software engineer, Remitly",
     "realnetworks": "2005 to 2006. Software development engineer",
-    "now": "Founded Tastemakers, which was acquired by Amazon. Now is lead software engineer of platform engineering at Remitly"
+    "now": "Co-founded Shelfari, which was acquired by Amazon. Now is lead software engineer of platform engineering at Remitly",
+    "image": "beukelman"
   }
 }

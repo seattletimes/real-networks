@@ -5,8 +5,8 @@
       "path": "fake-networks"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2016/business/real-networks"
     }
   },
   "title": "",
@@ -16,6 +16,6 @@
   "tags": [],
   "image": "assets/social.jpg",
   "sheets": ["1JZi601id7DPdIZBaiKLnEMZZWVtMUjgUqHDdUGT_rio"],
-  "production": false,
+  "production": true,
   "embedded": true
 }
